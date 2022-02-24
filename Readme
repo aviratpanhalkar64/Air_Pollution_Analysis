@@ -25,9 +25,6 @@ Outcomes-
 we are able to see corelation between PM2.5 and LST value as well as because of lockdown period PM2.5 and LST value decreased especially in 2020 (may, July).
 Correlation of every year is positive it means PM2.5 and LST relates with each other
 
-Output of bar chart
-![2019](https://user-images.githubusercontent.com/87040059/155505293-59ae5d06-835c-44bc-a047-96ae2614fa0b.png)
-
 •	Use of Geospatial Data in the project
 We have used Landsat 8 data to calculate Land Surface Temperature and made 100*100 meter grid and calculate LST Minimum, Maximum and Mean value of every
 grid and spatial join with PM2.5 value (Month wise).
