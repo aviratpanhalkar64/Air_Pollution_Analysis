@@ -1,0 +1,35 @@
+Datasets- 
+1.PM2.5 data (open.aq)
+2.Landsat 8(USGS)
+
+•	Summary -
+Urban air pollution is a dynamic mixture of Land Surface Temperature (LST), gases, particulate matter with daily and seasonal changes due to anthropogenic activities.
+So we decided to do comparative analysis of Land surface temperature and PM2.5 pollutant data during the period of Precovid(2019), covid(2020),Post covid(2021) for 
+Bangalore district. We used data PM.25 and Landsat8 data to calculate land surface temperature. We created buffer around PM.25 location and calculate zonal statistics 
+value of LST raster file (Minimum, Maximum, Mean) using QGIS. Both dataset we have joined using spatial join and created different csv file for different months, 
+that all files join  by year using concat function and plotted the graph for different year. So we can easily visualize the correlation of LST and PM2.5 pollutant 
+in Precovid(2019), covid(2020),Post covid(2021).
+
+•	Methodology- 
+1.We were collected data of PM2.5 for 2019,2020,2021 for the Bangalore city.
+2.We were downloaded same period Landsat 8 data(Cloud cover<10%).
+3.Using landsat 8 data we created LST raster file(create_py_usable.pynb)
+ 4.Using this raster file using zonal statistics and fishnet tool in QGIS and export that file in the form of GeoJson.
+4.In jupyter lab we were import same month PM2.5 value csv file and LST value data file
+5.Created buffer of every location of PM2.5.
+6.That buffer dataframe and LST dataframe joined using spatial join.(2019,2020,2021_spatial_join.pynb)
+7.After that we concat yearwise file and using pandas and matplotlib we created bar chart of every year for PM2.5 and LST value.(pd_concat_finaloutput.ipynb)
+8.Also we calculated correlation of PM2.5 and LST value(pd_concat_finaloutput.ipynb)
+9.We also created heatmap of every year (Heatmap_spatial_join_yearwise.ipynb)
+Outcomes- 
+we are able to see corelation between PM2.5 and LST value as well as because of lockdown period PM2.5 and LST value decreased especially in 2020 (may, July).
+Correlation of every year is positive it means PM2.5 and LST relates with each other
+
+Output of bar chart
+
+•	Use of Geospatial Data in the project
+We have used Landsat 8 data to calculate Land Surface Temperature and made 100*100 meter grid and calculate LST Minimum, Maximum and Mean value of every
+grid and spatial join with PM2.5 value (Month wise).
+
+•Improvement
+Yes we will collect landsat 8 data and different pollutant data for 10 years data and apply same procedure on that data for trend analysis and correlation analysis.
